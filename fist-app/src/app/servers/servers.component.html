@@ -1,21 +1,20 @@
 <label for="">Server Name</label>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<hr>
 <input type="text" class="form-control" [(ngModel)]="serverName" />
+<hr>
+<label for="">User name: </label>
 <div>
   <input
     type="text"
     class="form-control"
     placeholder="User Name"
-    (input)="onCreateUserName($event)"
+    [(ngModel)]="userName"
   />
 </div>
-
-
-<button type="button" class="btn btn-success" (click)="onClickBtnAdd($event)">
-  Add user name
-</button>
-
-<button type="button" class="btn btn-danger" (click)="onResetUserName()">
+<hr>
+<button type="button" class="btn btn-danger" [disabled]="userName===''"
+ (click)="userName=''">
   Reset name
 </button>
 
@@ -28,8 +27,18 @@
 >
   Add server
 </button>
-
+<hr>
 <p>{{ userName }}</p>
 
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}}</p>
+<ng-template #noServer>
+  <p >
+    No server was created!
+  </p>
+</ng-template>
+
+<hr>
 <app-server></app-server>
+<app-server></app-server>
+
