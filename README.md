@@ -19,3 +19,6 @@ Add Bootstrap3
 More
 - [Complete guide](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/t/lecture/6655614/)
 - [Help problem](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/17862130#questions/10444944)
+
+## Start project :exclamation:
+- `ng serve`
