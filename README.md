@@ -15,9 +15,34 @@ Create folder have all html,css,ts file:
  ```bash 
 ng g c + [fileName]
  ```
- ```bash 
- ng g c [fileName] --skipTests true: skip test file
- ```
+ - Skip test file (❗ add before create new compoent)
+
+```bash
+ "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+     }
+```
 
 Add Bootstrap3
  ```bash
