@@ -1,10 +1,11 @@
-<label for="">Server Name</label>
+<label>Server Name</label>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
 <hr>
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 <hr>
-<label for="">User name: </label>
+<label>User name: </label>
 <div>
+
   <input
     type="text"
     class="form-control"
@@ -28,6 +29,16 @@
   Add server
 </button>
 <hr>
+<button type="button" class="btn btn-success" (click)="showSecret = !showSecret">
+  Display Detail
+</button>
+<button type="button" class="btn btn-info" (click)="onClickToggleDisplay()">
+  Toggle
+</button>
+<hr>
+<p *ngIf="showSecret" [ngStyle]="{backgroundColor:countClickDisplayDetail%5===0?'orange':'cyan'} " [ngClass]="{detail:countClickDisplayDetail%5===0}">{{passWord}}</p>
+<div *ngFor="let item of recordLog; let i = index" [ngStyle]="{backgroundColor:i>4?'orange':'cyan'} " [ngClass]="{detail:i>4}">{{item}}</div>
+<hr>
 <p>{{ userName }}</p>
 
 <!-- <p>{{ serverCreationStatus }}</p> -->
@@ -39,6 +50,6 @@
 </ng-template>
 
 <hr>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+<!--<app-server></app-server>-->
 
