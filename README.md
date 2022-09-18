@@ -7,16 +7,26 @@
 ## Install :exclamation:
 
 Create new project:
-- `ng new [project-name] --no-strict`
+ ```bash 
+ ng new [project-name] --no-strict
+ ```
 
 Create folder have all html,css,ts file:
-- `ng g c + [fileName]`
--  `ng g c [fileName] --skipTests true`: skip test file
-
+ ```bash 
+ng g c + [fileName]
+ ```
+ ```bash 
+ ng g c [fileName] --skipTests true: skip test file
+ ```
 
 Add Bootstrap3
-- `npm install --save bootstrap@3`
-- go to angular.json -> edit styles to add "node_modules/bootstrap/dist/css/bootstrap.min.css"
+ ```bash
+ npm install --save bootstrap@3
+ ```
+- Go to `angular.json`  -> Edit `styles` to add 
+```bash
+ "node_modules/bootstrap/dist/css/bootstrap.min.css"
+```
 
 More
 - [Complete guide](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/t/lecture/6655614/)
