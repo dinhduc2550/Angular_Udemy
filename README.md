@@ -1,3 +1,61 @@
-# Angular_Udemy
-ng g c + ten file de tao ra 1 thu muc co day du html,css,ts component
-Run server: ng serve
+
+# How to set up new project Angular
+
+
+
+
+## Install :exclamation:
+
+Create new project:
+ ```bash 
+ ng new [project-name] --no-strict
+ ```
+
+Create folder have all html,css,ts file:
+ ```bash 
+ng g c + [fileName]
+ ```
+ - Skip test file (❗ add before create new compoent)
+
+```bash
+ "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+     }
+```
+
+Add Bootstrap3
+ ```bash
+ npm install --save bootstrap@3
+ ```
+- Go to `angular.json`  -> Edit `styles` to add 
+```bash
+ "node_modules/bootstrap/dist/css/bootstrap.min.css"
+```
+
+More
+- [Complete guide](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/t/lecture/6655614/)
+- [Help problem](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/17862130#questions/10444944)
+
+## Start project :exclamation:
+- `ng serve`
