@@ -20,7 +20,7 @@ ng g c + [fileName]
 ```bash
  "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
+          "style": "css",
           "skipTests": true
         },
         "@schematics/angular:class": {
