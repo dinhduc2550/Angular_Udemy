@@ -11,6 +11,8 @@ Create new project:
 
 Create folder have all html,css,ts file:
 - `ng g c + [fileName]`
+-  `ng g c [fileName] --skipTests true`: skip test file
+
 
 Add Bootstrap3
 - `npm install --save bootstrap@3`
