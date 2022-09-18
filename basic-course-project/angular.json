@@ -6,7 +6,7 @@
     "basic-course-project": {
       "projectType": "application",
       "schematics": { "@schematics/angular:component": {
-        "style": "scss",
+        "style": "css",
         "skipTests": true
       },
         "@schematics/angular:class": {
