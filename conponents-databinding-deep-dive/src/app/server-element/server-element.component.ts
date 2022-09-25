@@ -8,7 +8,7 @@ import {Component, ContentChild, ElementRef, Input, OnInit, ViewEncapsulation} f
 })
 export class ServerElementComponent implements OnInit{
   @Input('srvElement') element!: { type: string; name: string; content: string };
-@ContentChild('contentParagraph') paraGraph!:ElementRef
+  @ContentChild('contentParagraph') paraGraph!:ElementRef
   constructor() { }
 
   ngOnInit(): void {

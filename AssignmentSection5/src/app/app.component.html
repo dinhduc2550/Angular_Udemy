@@ -1,0 +1,13 @@
+<div class="container">
+
+  <app-game-control (eventStart)="onStart($event)">
+<!--  (eventStop) = "onStop($event)" -->
+  </app-game-control>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd *ngFor="let oddNumber of arrOddNumber" [number]="oddNumber" ></app-odd>
+      <app-even *ngFor="let evenNumber of arrEvenNumber" [number]="evenNumber" ></app-even>
+    </div>
+  </div>
+
+</div>
