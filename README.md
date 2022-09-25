@@ -15,6 +15,12 @@ Create folder have all html,css,ts file:
  ```bash 
 ng g c + [fileName]
  ```
+ 
+ Create new directive file:
+ ```bash 
+ ng g d [fileName]
+ ```
+ 
  - Skip test file (❗ add before create new compoent)
 
 ```bash
