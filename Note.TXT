@@ -1,0 +1,20 @@
+khi gọi 1 service trong 1 service thì thêm @Injectable vào service gọi đến service kia
+dùng service để cộng dồn vì nó thường sử dụng cùng 1 instance
+
+add toan bo phan tu arr2 vao arr
+this.arr.push[...arr2]
+
+
+//ROUTER
+Khác nhau giữa routerLink="/servers" và routerLink="servers"
+dấu "/" là đường dẫn tuyệt đối nếu đang ở trong "servers" mà 
+click vào 1 đường dẫn là "servers" thì sẽ lỗi do lúc đó đường dẫn 
+sẽ là "servers/servers" còn nếu link là "/servers"
+thì không có lỗi do có dấu dẫn tuyệt đối "/"
+**	    "/path" absolute path
+            "path" relative path
+            "../path" back to 1 level path
+            "./path" root path
+**
+
+navigate không ảnh hưởng vào đường dẫn
