@@ -2,6 +2,23 @@
 # How to set up new project Angular
 
 
+## Installation Node JS version
+
+Install node js with nvm
+
+```bash
+  nvm install [version]
+```
+Change version Node JS
+```bash
+  nvm use [version]
+```
+:exclamation: version : 14.17.3
+
+## Installation Anglar cli specific version (use version 12)
+```bash
+  npm install -g @angular/cli@12
+```
 
 
 ## Install :exclamation:
@@ -65,3 +82,4 @@ More
 
 ## Start project :exclamation:
 - `ng serve`
+
