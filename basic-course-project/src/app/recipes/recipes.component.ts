@@ -10,15 +10,14 @@ import {Router} from "@angular/router";
   providers:[RecipesService]
 })
 export class RecipesComponent implements OnInit {
-  selectedRecipe!:Recipe;
-  constructor(private recipeService:RecipesService,private router:Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.recipeService.recipesSelected.subscribe(
-      (recipe:Recipe)=>{
-        this.selectedRecipe = recipe
-      }
-    )
+    // this.recipeService.recipesSelected.subscribe(
+    //   (recipe:Recipe)=>{
+    //     this.selectedRecipe = recipe
+    //   }
+    // )
   }
 
 }

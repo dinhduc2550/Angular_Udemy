@@ -4,7 +4,6 @@ dùng service để cộng dồn vì nó thường sử dụng cùng 1 instance
 add toan bo phan tu arr2 vao arr
 this.arr.push[...arr2]
 
-
 //ROUTER
 Khác nhau giữa routerLink="/servers" và routerLink="servers"
 dấu "/" là đường dẫn tuyệt đối nếu đang ở trong "servers" mà 
@@ -18,3 +17,26 @@ thì không có lỗi do có dấu dẫn tuyệt đối "/"
 **
 
 navigate không ảnh hưởng vào đường dẫn
+
+private route:ActivatedRoute dùng để fetch data
+lấy dữa liệu từ rout
+
+[routerLink]
+
+khai bao path trong router phai can de path dung vi tri
+
+co 2 cach de navigate: dung [routeLink] hoac router.navigate
+
+//OBSERVABLE
+khi 1 observable subcribe thì nó sẽ luôn chạy kể cả chuyển trang, vì thế cần stop nếu ko dùng
+nếu các observable được tạo bởi angular(route.params) nó sẽ tự unsubcribe
+
+Lọc dữ liệu B177-Section13
+
+Sửng subject cho giao tiếp giữa các component chẳng hạn như service, không phải để truyền dữ liệu như EventEmitter
+
+//Section 15
+Validator: https://angular.io/api/forms/Validators
+directives template-driven: https://angular.io/api?type=directive
+
+ngModelGroup: tách form to thành form nhỏ để gửi dữ liệu muốn nhưng tổng thể nó vẫn ở trong form to
