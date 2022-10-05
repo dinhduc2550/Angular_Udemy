@@ -24,23 +24,23 @@ export class AppComponent implements OnInit {
     // this.signupForm.valueChanges.subscribe(
     //   (value) => console.log(value)
     // )
-    this.signupForm.statusChanges.subscribe(
-      (status) => console.log(status)
-    )
-    this.signupForm.setValue({
-      'userData2':{
-        'userName':'San',
-        'email2':'dinhduc2550@gmail.com'
-      },
-      'gender2':'male',
-      'hobbies2':[]
-    })
-    //patch value chi set value cho att duoc set khong set nhung thu con lai
-    this.signupForm.patchValue({
-      'userData2':{
-        'userName':'Anna',
-      }
-    })
+    // this.signupForm.statusChanges.subscribe(
+    //   (status) => console.log(status)
+    // )
+    // this.signupForm.setValue({
+    //   'userData2':{
+    //     'userName':'San',
+    //     'email2':'dinhduc2550@gmail.com'
+    //   },
+    //   'gender2':'male',
+    //   'hobbies2':[]
+    // })
+    // //patch value chi set value cho att duoc set khong set nhung thu con lai
+    // this.signupForm.patchValue({
+    //   'userData2':{
+    //     'userName':'Anna',
+    //   }
+    // })
   }
 
   onSubmit() {

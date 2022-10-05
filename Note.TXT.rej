@@ -1,0 +1,9 @@
+diff a/Note.TXT b/Note.TXT	(rejected hunks)
+@@ -45,7 +45,6 @@
+ +<<<<<<< HEAD
+ +
+ +
+- Khi sử dụng pipe phải để đúng thứ tự param pipes
+ +Khi sử dụng pipe phải để đúng thứ tự param pipes
+ +=======
+ +B213: modifile error validation

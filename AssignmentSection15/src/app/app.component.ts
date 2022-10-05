@@ -15,7 +15,7 @@ export class AppComponent {
   selectedSubscription = "Advanced"
 
   onSubmit() {
-    this.submitted = true
+    this.submitted = truefo
     this.data.mail = this.form.value.mail;
     this.data.password = this.form.value.password;
     this.data.sub = this.form.value.subscription;
