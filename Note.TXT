@@ -40,3 +40,6 @@ Validator: https://angular.io/api/forms/Validators
 directives template-driven: https://angular.io/api?type=directive
 
 ngModelGroup: tách form to thành form nhỏ để gửi dữ liệu muốn nhưng tổng thể nó vẫn ở trong form to
+
+
+Khi sử dụng pipe phải để đúng thứ tự param pipes
