@@ -36,7 +36,8 @@ export class PostService {
         //add query params to url http://.....json?print=pretty&...
         // params: new HttpParams().set('print','pretty')
         //c2: multi params
-        params: searchParam
+        params: searchParam,
+        responseType:'json'
       })
       .pipe(map(responseData => {
           const postArray: Post[] = [];
@@ -55,11 +56,13 @@ export class PostService {
   deletePost() {
     return this.http.delete('https://section18-http-requests-606f5-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json',
       {
-        observe: 'events'
+        observe: 'events',
+        responseType:'text'
+
       }).pipe(
         tap(event=>{
           if(event.type === HttpEventType.Sent){
-
+            //coding smt, sending data
           }
          if(event.type === HttpEventType.Response){
            console.log(event.body)

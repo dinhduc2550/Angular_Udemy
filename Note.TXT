@@ -38,12 +38,16 @@ Sửng subject cho giao tiếp giữa các component chẳng hạn như service,
 //Section 15
 Validator: https://angular.io/api/forms/Validators
 directives template-driven: https://angular.io/api?type=directive
-
 ngModelGroup: tách form to thành form nhỏ để gửi dữ liệu muốn nhưng tổng thể nó vẫn ở trong form to
-<<<<<<< HEAD
 
+
+//Section 16
+
+Subject là 1 hot Obvervable để quan sát, xử lý các thay đổi
+Nếu khai báo provider của 1 service khác component khi sang component khác sẽ bị destroy
+//END SECTION 16
 
 Khi sử dụng pipe phải để đúng thứ tự param pipes
 =======
 B213: modifile error validation
->>>>>>> 32f08d7 (update)
+

@@ -6,17 +6,19 @@ import {Subject} from "rxjs";
 
 @Injectable()
 export class RecipesService {
+  recipesChanged = new Subject<Recipe[]>();
+
   // recipesSelected = new EventEmitter<Recipe>();
   private recipes: Recipe[] = [
-    new Recipe( "Pu0n", "This is simply a test 1", "https://assets.bonappetit.com/photos/57ae158a53e63daf11a4e1f3/master/pass/grilled-asparagus-with-harissa-646.jpg",
+    new Recipe("Pu0n", "This is simply a test 1", "https://assets.bonappetit.com/photos/57ae158a53e63daf11a4e1f3/master/pass/grilled-asparagus-with-harissa-646.jpg",
       [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
-    new Recipe( "Food", "This is simply a test 2", "https://media.baamboozle.com/uploads/images/152185/1607591595_198751",
+    new Recipe("Food", "This is simply a test 2", "https://media.baamboozle.com/uploads/images/152185/1607591595_198751",
       [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]),
-    new Recipe( "Bánh Đa", "This is simply a test 3", "https://bepvang.org.vn/Userfiles/Upload/images/Download/2017/2/24/268f41e9fdcd49999f327632ed207db1.jpg",
+    new Recipe("Bánh Đa", "This is simply a test 3", "https://bepvang.org.vn/Userfiles/Upload/images/Download/2017/2/24/268f41e9fdcd49999f327632ed207db1.jpg",
       [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
-    new Recipe( "Tôm chiên", "This is simply a test 4", "https://nhahanghalong.vn/wp-content/uploads/2018/05/549577cf14e2fabca3f3.jpg",
+    new Recipe("Tôm chiên", "This is simply a test 4", "https://nhahanghalong.vn/wp-content/uploads/2018/05/549577cf14e2fabca3f3.jpg",
       [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
-    new Recipe( "Bánh cuốn", "This is simply a test 5", "https://beptueu.vn/hinhanh/tintuc/banh-cuon-hinh-anh-mon-an-dac-san-viet-nam.jpg",
+    new Recipe("Bánh cuốn", "This is simply a test 5", "https://beptueu.vn/hinhanh/tintuc/banh-cuon-hinh-anh-mon-an-dac-san-viet-nam.jpg",
       [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]),
   ];
 
@@ -24,6 +26,10 @@ export class RecipesService {
 
   }
 
+  setRecipes(recipes:Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice())
+  }
 
   getRecipes() {
     //slice la de tao 1 ban sao
@@ -36,5 +42,18 @@ export class RecipesService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients)
+  }
+  addRecipe(recipe:Recipe){
+    this.recipes.push(recipe)
+    this.recipesChanged.next(this.recipes.slice())
+  }
+  updateRecipe(index:number,newRecipe:Recipe){
+    this.recipes[index]=newRecipe;
+    this.recipesChanged.next(this.recipes.slice())
+
+  }
+  deleteRecipe(index:number){
+    this.recipes.splice(index,1)
+    this.recipesChanged.next(this.recipes.slice())
   }
 }
