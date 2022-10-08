@@ -51,3 +51,6 @@ Khi sử dụng pipe phải để đúng thứ tự param pipes
 =======
 B213: modifile error validation
 
+//Section 20
+B300: tap là một hành động của observable dùng để thực hiện 1 số hành động mà không làm thay đổi response
+
