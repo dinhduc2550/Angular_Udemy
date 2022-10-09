@@ -53,4 +53,18 @@ B213: modifile error validation
 
 //Section 20
 B300: tap là một hành động của observable dùng để thực hiện 1 số hành động mà không làm thay đổi response
+B302: BehaviorSubject giống Subject nhưng có thể truy câp vào ngay giá trị vừa emit mặc dù chưa Subscribe
+	Pipe(take(1)) chỉ lấy 1 giá trị Observable và huỷ toàn bộ những đứa khác, dùng trong user, tránh việc phải gọi lại
+	lệnh unsubscribe
+	Pipe(take(1),exhaustMap()): exhaust sẽ lấy giá trị của thằng observable trước chứa nó là trả về 1 observable mới
+B307:Auth Guard
+	!!user: Nếu user không null -> return true else false
+ map(user => {
+      const isAuth = !!user
+      if(isAuth) return true
+      return this.router.createUrlTree(['/auth']) }) , tap(isAuth => {
+     this.router.navigate(['/auth']) })
+	-Tap() ở đây nhận giá trị từ map() là true or false sau khi được thực thi
 
+Section 22: Service không cần export trong provider hay core module
+ 	B332: Nếu cài đặt 1 module là lazy loading thì ko cần import ở app.module.ts nữa
